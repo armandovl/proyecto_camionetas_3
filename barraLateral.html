@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <style>
+
+      *{
+          margin:10px;
+          padding:0px;
+        }
+
+    body {
+    //font-family: 'Raleway';font-size: 22px;
+    }
+    
+    </style>
+    
+    
+    
+  </head>
+  <body bgcolor=#F2F2F2>
+    <h2>Generación de bitácoras</h2>
+    <p>Rellenar los datos y ejecutar</p>
+    <form>
+
+      <input id="idCarpetaMaestra" placeholder="id de la carpeta" type="text" style="width: 150px;">
+
+      <br>
+      <br>
+      
+      <select name="select" id="filtroTerritorio" style="width: 150px;" onChange="cambiarInput()">
+      <option disabled selected>TERRITORIO</option>
+      <option value="ACAYUCAN">ACAYUCAN</option>
+      <option value="BALANCAN">BALANCAN</option>
+      <option value="CAMPECHE">CAMPECHE</option>
+      <option value="CHIHUAHUA">CHIHUAHUA</option>
+      <option value="COLIMA">COLIMA</option>
+      <option value="COMALCALCO">COMALCALCO</option>
+      <option value="CORDOBA">CORDOBA</option>
+      <option value="DURANGO">DURANGO</option>
+      <option value="GUERRERO">GUERRERO</option>
+      <option value="HIDALGO">HIDALGO</option>
+      <option value="ISTMO">ISTMO</option>
+      <option value="MICHOACAN">MICHOACAN</option>
+      <option value="MIXTECA">MIXTECA</option>
+      <option value="MORELOS">MORELOS</option>
+      <option value="NAYARIT">NAYARIT</option>
+      <option value="OCOSINGO">OCOSINGO</option>
+      <option value="PALENQUE">PALENQUE</option>
+      <option value="PAPANTLA">PAPANTLA</option>
+      <option value="PICHUCALCO">PICHUCALCO</option>
+      <option value="PUEBLA">PUEBLA</option>
+      <option value="SAN LUIS POTOSI">SAN LUIS POTOSI</option>
+      <option value="SINALOA">SINALOA</option>
+      <option value="TAMAULIPAS">TAMAULIPAS</option>
+      <option value="TANTOYUCA">TANTOYUCA</option>
+      <option value="TAPACHULA">TAPACHULA</option>
+      <option value="TEAPA">TEAPA</option>
+      <option value="TLAXCALA">TLAXCALA</option>
+      <option value="TZUCACAB - OTHON P. BLANCO">TZUCACAB - OTHON P. BLANCO</option>  
+	  </select>
+      
+      
+      <br><br>
+      <button id="boton" class="action"> Ejecutar funcion</button>
+    </form>
+
+    <br><br>
+
+    <div>
+          <h2>Enviar archivos por territorio</h2>
+          <p>Rellenar los campos y enviar</p>
+
+          <!--<input id="idCarpetaAEnviar" placeholder="id de la carpeta a enviar" type="text" style="width: 150px;">-->
+          <br><br>
+          <input id="idMailEnviar" placeholder="correo a enviar" type="text" style="width: 150px;">
+          <br><br>
+          <button id="botonEnviar" class="action"> Enviar Documentos</button>
+    </div>
+
+ 
+
+    <script>
+
+      function cambiarInput(){
+        var inputNombre = document.getElementById("idMailEnviar");
+        var territorioSeleccionado= document.getElementById("filtroTerritorio").value;
+        
+        switch(territorioSeleccionado){
+          case 'ACAYUCAN':
+          inputNombre.value='acayucansembrandovida@gmail.com,liz-al1997@hotmail.com';
+          break;
+          case 'BALANCAN':
+          inputNombre.value='erika.log85@gmail.com,lauaquino1994@gmail.com';
+          break;
+          case 'CHIHUAHUA':
+          inputNombre.value='sembrandovidachihuahua2021@gmail.com,serranoalyna1@gmail.com';
+          break;
+          case 'COLIMA':
+          inputNombre.value='sembrandovidacolima@gmail.com,maxi.ventura@bienestar.gob.mx';
+          break;
+          case 'COMALCALCO':
+
+          inputNombre.value='coordadmitiva.comalcalco@gmail.com,mari7716@hotmail.com';break;
+          case 'CORDOBA':
+          inputNombre.value='sembrandocordoba@gmail.com,roberto_t7@hotmail.com';
+          break;
+          case 'DURANGO':
+          inputNombre.value='judurango@hotmail.com,cinthya.padilla@bienestar.gob.mx';
+          break;
+          case 'GUERRERO':
+          inputNombre.value='rocio.basilio@bienestar.gob.mx,rocio.svgro@gmail.com';
+          break;
+          case 'HIDALGO ':
+          inputNombre.value='cpsebastian.hernandez@gmail.com,cpsebastian.hernandez@gmail.com';
+          break;
+          case 'MICHOACAN':
+          inputNombre.value='norma.bienestar1@gmail.com,norma.bienestarmasa31@gmail.com';
+          break;
+          case 'MORELOS':
+          inputNombre.value='tinocoextreme@yahoo.com.mx,tinocoextreme@yahoo.com.mx';
+          break;
+          case 'NAYARIT':
+          inputNombre.value='martinezmanu5454@gmail.com,martinezmanu5454@gmail.com';
+          break;
+          case 'ISTMO':
+          inputNombre.value='enlaceistmo1@gmail.com,enlaceistmo1@gmail.com';
+          break;
+          case 'MIXTECA':
+          inputNombre.value='sembrandovidaoaxbie@gmail.com,oskremmaa@gmail.com';
+          break;
+          case 'OCOSINGO':
+          inputNombre.value='ct.ocosingo.psv.2021@gmail.com  ,rolancenter@hotmail.com';
+          break;
+          case 'PALENQUE':
+          inputNombre.value='pacomeneses24@gmail.com,pacomeneses24@gmail.com';
+          break;
+          case 'PAPANTLA':
+          inputNombre.value='enlace.cv2021@gmail.com,guadalupe.moralesg@bienestar.gob.mx';
+          break;
+          case 'PICHUCALCO'
+          :inputNombre.value='jesus.maldonado@bienestar.gob.mx,jesus.maldonado@bienestar.gob.mx';
+          break;
+          case 'PUEBLA':
+          inputNombre.value='enlace.sembrandovida.puebla@gmail.com,jakicoper@gmail.com';
+          break;
+          case 'SAN LUIS POTOSI':
+          inputNombre.value='slp.sembrandovida@gmail.com,alejandraml2014@gmail.com';
+          break;
+          case 'SINALOA':
+          inputNombre.value='lidia.penuelas@bienestar.gob.mx,Reba_74m@hotmail.com';
+          break;
+          case 'TAMAULIPAS':
+          inputNombre.value='sembrandovidaentamaulipas@gmail.com,jose.rivera@bienestar.gob.mx';
+          break;
+          case 'TANTOYUCA':
+          inputNombre.value='Eduardoher1993@outlook.com,Eduardoher1993@outlook.com';
+          break;
+          case 'TAPACHULA':
+          inputNombre.value='enlacecttap@gmail.com, juansvtap@gmail.com';
+          break;
+          case 'TEAPA':
+          inputNombre.value='sembrandovidateapa1@gmail.com,angeles.bienestarteapa@gmail.com';
+          break;
+          case 'TLAXCALA':
+          inputNombre.value='enlac.sv_tlax@outlook.com,bernapct@hotmail.com';
+          break;
+          case 'TZUCACAB - OTHON P. BLANCO':
+          inputNombre.value='sembrandovidaqroo.yuc@gmail.com,yesvaldezfuentes@gmail.com';
+          break;
+          case 'CAMPECHE':
+          inputNombre.value='sembrandovida.sedexpujil@gmail.com,yuridiana.lazaro@bienestar.gob.mx';
+          break;
+
+
+        }
+        
+
+      }
+
+
+
+      // funcion cuando le den clic al boton
+      document.getElementById("boton").addEventListener("click",enviarRespuesta);
+      
+      function enviarRespuesta(){
+		
+        // traemos los valores de los input mediante si ID
+        var territorio= document.getElementById("filtroTerritorio").value;
+
+        // traemos los valores de los input mediante si ID
+        var carpeta= document.getElementById("idCarpetaMaestra").value;
+        
+        google.script.run.global(territorio,carpeta);
+        
+        // limpiar los ID
+		    //document.getElementById("filtroTerritorio").value="";   
+
+	    }
+
+
+      // funcion cuando le den clic al boton Enviar
+      document.getElementById("botonEnviar").addEventListener("click",enviarRespuestaDeCorreo);
+      
+      function enviarRespuestaDeCorreo(){
+		
+        // traemos los valores de los input mediante si ID
+        var carpetaDeArchivosEnv= document.getElementById("filtroTerritorio").value;
+
+        var carpetaPrinc=document.getElementById("idCarpetaMaestra").value;
+
+        // traemos los valores de los input mediante si ID
+        var mail= document.getElementById("idMailEnviar").value;
+        
+        google.script.run.enviarCorreo(carpetaDeArchivosEnv,mail,carpetaPrinc);
+        
+        // limpiar los ID
+		    //document.getElementById("filtroTerritorio").value="";   
+
+	    }
+
+    </script>
+    
+  </body>
+
+  <!--
+    hojas de estilo de google
+    https://developers.google.com/workspace/add-ons/guides/css
+  -->
+</html>
+
+
