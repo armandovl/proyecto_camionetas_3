@@ -20,17 +20,20 @@
     
     
   </head>
-  <body bgcolor=#F2F2F2>
-    <h2>Generación de bitácoras</h2>
-    <p>Rellenar los datos y ejecutar</p>
+  <body bgcolor=#005948 >
+    <center>
+    <h1 style="color:white; font-weight: bold;">Generación de bitácoras</h1>
+    <img src="https://www.tijuana.tecnm.mx/wp-content/uploads/2021/02/2021.png" width="150px" height="150">
+    </center>
+    <p style="color:white; font-weight: bold;" >Rellenar los datos y ejecutar</p>
     <form>
 
-      <input id="idCarpetaMaestra" placeholder="id de la carpeta" type="text" style="width: 150px;">
+      <input style="color:white; font-weight: bold;" id="idCarpetaMaestra" placeholder="id de la carpeta principal" type="text" style="width: 200px;">
 
       <br>
       <br>
       
-      <select name="select" id="filtroTerritorio" style="width: 150px;" onChange="cambiarInput()">
+      <select name="select" id="filtroTerritorio" style="width: 200px;" onChange="cambiarInput()">
       <option disabled selected>TERRITORIO</option>
       <option value="ACAYUCAN">ACAYUCAN</option>
       <option value="BALANCAN">BALANCAN</option>
@@ -67,14 +70,10 @@
       <button id="boton" class="action"> Ejecutar funcion</button>
     </form>
 
-    <br><br>
+    <br>
 
     <div>
-          <h2>Enviar archivos por territorio</h2>
-          <p>Rellenar los campos y enviar</p>
-
-          <!--<input id="idCarpetaAEnviar" placeholder="id de la carpeta a enviar" type="text" style="width: 150px;">-->
-          <br><br>
+          <h2 style="color:white; font-weight: bold;">Enviar archivos por territorio</h2>
           <textarea id="idMailEnviar" placeholder="correo a enviar" type="text" style="width: 200px;height:70px;"></textarea>
           <br><br>
           <button id="botonEnviar" class="action"> Enviar Documentos</button>
